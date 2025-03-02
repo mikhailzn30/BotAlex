@@ -1,0 +1,17 @@
+aiofiles
+aiogram
+aiohappyeyeballs
+aiohttp
+aiosignal
+annotated-types
+attrs
+certifi
+frozenlist
+idna
+magic-filter
+multidict
+propcache
+pydantic
+pydantic_core
+typing_extensions
+yarl

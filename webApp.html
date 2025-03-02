@@ -1,0 +1,25 @@
+</head>
+<body>
+    <form id="userForm">
+        <label for="name">Ваше имя:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="position">Ваша должность:</label>
+        <input type="text" id="position" name="position" required>
+        <button type="submit">Отправить</button>
+    </form>
+    <script>
+        const tg = window.Telegram.WebApp;
+        tg.expand();
+
+        document.getElementById('userForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const position = document.getElementById('position').value;
+            
+            // Отправляем данные в бот
+            tg.sendData(JSON.stringify({ name, position }));
+            tg.close(); // Закрыть Web App
+        });
+    </script>
+</body>
+</html>
